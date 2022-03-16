@@ -3,7 +3,7 @@ const cekHariKerja = (day) => {
         setTimeout(() => {
             const dataDay = ["senin", "selasa", "rabu", "kamis", "jumat"]
             let cek = dataDay.find((item) => {
-                return item === day.toLowerCase()
+                return item === day
             })
             if(cek){
                 resolve(cek)
@@ -42,7 +42,7 @@ switch (new Date().getDay()) {
 }
 console.log("Sedang mengecek apakah hari ini hari kerja atau tidak...")
 
-// cekHariKerja(hariIni)                    // Menjalankan fungsi cekHariKerja dan mengirim parameter hariIni
+// cekHariKerja(hariIni.toLowerCase())                    // Menjalankan fungsi cekHariKerja dan mengirim parameter hariIni
 // .then((result) => {                      // Akan dijalankan jika hasilnya resolve
 //     console.log(tampilHasil(result))
 // })
@@ -55,7 +55,7 @@ console.log("Sedang mengecek apakah hari ini hari kerja atau tidak...")
 
 // const main = async () => {
 //     try {                                                // Menjalankan try sebagai langkah awal
-//         const hasil = await cekHariKerja(hariIni)        // Memakai 'await' agar ditunggu dulu baru proses selanjutnya dijalankan
+//         const hasil = await cekHariKerja(hariIni.toLowerCase())        // Memakai 'await' agar ditunggu dulu baru proses selanjutnya dijalankan
 //         console.log(tampilHasil(hasil))
 //     } catch (err) {                                      // Akan dijalankan ketika menangkap hasil error
 //         console.log(err.message)

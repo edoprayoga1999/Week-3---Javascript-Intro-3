@@ -1,4 +1,4 @@
-const angka = "6"
+const angka = "5"
 const step1 = () => {
     console.log("Sedang mengecek bilangan ganjil atau genap...")
 }
